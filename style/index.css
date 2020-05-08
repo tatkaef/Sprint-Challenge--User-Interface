@@ -92,28 +92,29 @@ nav a {
     color:black;
     margin: 10px;
 }
+
 .bigimg {
     width: 100%;
    }
+
 .top-content {
     display: flex;
     flex-wrap: wrap;
     margin: 4vh 0;
     border-bottom: 1px dashed black;
 }
-
+.text-container{
+    padding: 3vh;
+}
 .top-content .text-container {
     width: 48%;
-    padding: 0 1%;
-    padding-bottom: 3vh;
-     margin: 0 1vh;
+    margin: 0 1vh;
 }
 
 .middle-content {
     margin-bottom: 20px;
     border-bottom: 1px dashed black;
 }
-
 .middle-content h2 {
     padding: 0 2%;
     margin-bottom: 0;
@@ -125,7 +126,6 @@ nav a {
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
-
 .box{ 
     width: 100px;
     height: 100px;
@@ -166,16 +166,15 @@ nav a {
    #box10 {
     background: dodgerblue;
    }
+
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
     justify-content: space-around;
 }
-
 .bottom-content .text-container {
     padding-right: 4%;
 }
-
 .bottom-content .text-container:last-child {
     padding-right: 0;
 }
@@ -184,7 +183,6 @@ footer {
     width: 100%;
     background: black;
 }
-
 footer nav {
     width: 60%;
     display: flex;
@@ -193,16 +191,16 @@ footer nav {
     padding: 20px 2%;
     font-size: 14px;
 }
-
 footer nav a {
     color: white;
     text-decoration: none;
-
-    
     }
+
+
+
 /*--------- CHANGE 800px */
     @media(max-width: 800px){
-       /* body { background: blue; } */
+       body { background: blue; }
        header{
            margin: 3vh 1vh;
        }
@@ -212,22 +210,45 @@ footer nav a {
        nav a {         
            font-size: 4vh; 
         }
+        .text-container{
+            font-size: 3vh;
+        }
         .top-content {
             flex-direction: column;
         }
         .top-content .text-container {
             width: 95%;
         }
+        .middle-content{
+            padding: 3vh;
+        }
+        h2{
+            font-size: 4vh;
+        }
         .boxes{
             width: 70%;
-
+            margin: 0 auto;
+            font-size: 4vh;
+            padding: 3vh 0 0 0;
         }
         .box{
             height: 30vh;
             width: 30vh;
         }
-
-
+        .bottom-content{
+            flex-wrap: wrap;         
+        }
+        .bottom-content .text-container{
+           width: 45%;                 
+        }
+        footer{
+            display: flex;
+            justify-content: center;
+            height: 17vh;
+        }
+        footer nav {
+            width: 80%;
+        }
       } /*close 800*/
 
 
@@ -236,73 +257,55 @@ footer nav a {
 
 /*--------- CHANGE 500px */      
  @media(max-width: 500px){
+    body { background:darkkhaki; }
     .container {
-          width: 100%;
+          width: 98%;
      }
     header {
-        width: 100%;
+        /* width: 100%; */
         height: auto;
-          display: flex;
-          flex-direction: column; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+     }
+     header img{
+         margin: 0 0 3vh;
      }
      nav {
-        border: 3px solid blue;
-          display: flex;
-          justify-content: center;
-          flex-direction: column; 
-          width: 60%;
-          height: auto;
-          align-items: center;
-                   
-     }
-     a {
-         display: flex;
-         border: 3px solid blue;
-         background: grey;
-          height: 40px;
-          width: 60%;
-          /* text-align: center; */
-          align-items: center;
-          /* justify-items: center; */
-                    
-     }
-   
-   .top-content{
-    display: flex;
-    flex-direction: column;
-}
-.text-container h2 {
-font-weight: bold;
-}  
-.middle-content{
-    width: 100%;
-    text-align: center;
-   
-   }
-   .bigimg{
-    /* height: 100%; */
-    width: 100%;
-}
-img {
-    width: 100%;   
-}
-.boxes{
-    width: 100vh;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: center;
-   }
+         flex-direction: column; 
+         align-items: center;         
+        }
+        a{
+            padding: 1vh;
+        }
+        .bigimg img{
+            width: 100%;
+        }
+        .text-container{
+           font-size: 2.5vh;
+        }
+        .box{
+            height: 25vh;
+            width: 25vh;
+        }
+        .bottom-content{
+            flex-direction: column;
+        }
+        .bottom-content .text-container{
+            width: 90%; 
+        }
+        footer{
+            height: 34vh;
+        }
+    } /*close 500*/
 
-   .boxes .box {
-       width: 100px;
 
-   }
+
+
+
+      
    
-   .bottom-content{
-      display: none;
-    }    
-    footer{
-      display: none;
-    }      
-      }
+  
+
+   
+   
