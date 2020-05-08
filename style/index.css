@@ -29,7 +29,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	line-height: 1px;
 }
 ol, ul {
 	list-style: none;
@@ -70,19 +70,43 @@ p {
     width: 800px;
     margin: 0 auto;
 }
-
+header {
+    width: 100%;
+    display: flex;
+    margin: 5vh 0 5vh 0;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items:flex-end;
+}
+header img{
+    height: 7vh;
+}
+nav {
+    width: 100%;
+    display: flex;
+    justify-content:space-between;
+    margin: 0 3vh;    
+}
+nav a {
+    text-decoration: none;
+    color:black;
+    margin: 10px;
+}
+.bigimg {
+    width: 100%;
+   }
 .top-content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin-bottom: 20px;
+    margin: 4vh 0;
     border-bottom: 1px dashed black;
 }
 
 .top-content .text-container {
     width: 48%;
     padding: 0 1%;
-    padding-bottom: 20px;  
+    padding-bottom: 3vh;
+     margin: 0 1vh;
 }
 
 .middle-content {
@@ -95,14 +119,15 @@ p {
     margin-bottom: 0;
 }
 
-.middle-content .boxes {
+.boxes {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.middle-content .boxes .box {
-    width: 12.5%;
+.box{ 
+    width: 100px;
     height: 100px;
     background: black;
     margin: 20px 2.5%;
@@ -111,7 +136,36 @@ p {
     align-items: center;
     justify-content: center;
 }
-
+ #box1 {
+    background: teal;
+   }
+   #box2 {
+    background: gold;
+   }
+   #box3 {
+    background: cadetblue;
+   }
+   #box4 {
+    background: coral;
+   }
+   #box5 {
+    background: crimson;
+   }
+   #box6 {
+    background: forestgreen;
+   }
+   #box7 {
+    background: darkorchid;
+   }
+   #box8 {
+    background: hotpink;
+   }
+   #box9 {
+    background: indigo;
+   }
+   #box10 {
+    background: dodgerblue;
+   }
 .bottom-content {
     display: flex;
     margin: 0 2% 20px;
@@ -143,4 +197,112 @@ footer nav {
 footer nav a {
     color: white;
     text-decoration: none;
+
+    
+    }
+/*--------- CHANGE 800px */
+    @media(max-width: 800px){
+       body { background: blue; }
+       header{
+           margin: 3vh 1vh;
+       }
+       header img{
+           height: 6vh;
+       }
+       nav a {         
+           font-size: 4vh; 
+        }
+        .top-content {
+            flex-direction: column;
+        }
+        .top-content .text-container {
+            width: 95%;
+        }
+        .boxes{
+            width: 70%;
+
+        }
+        .box{
+            height: 30vh;
+            width: 30vh;
+        }
+
+
+      } /*close 800*/
+
+
+
+
+
+/*--------- CHANGE 500px */      
+ @media(max-width: 500px){
+    .container {
+          width: 100%;
+     }
+    header {
+        width: 100%;
+        height: auto;
+          display: flex;
+          flex-direction: column; 
+     }
+     nav {
+        border: 3px solid blue;
+          display: flex;
+          justify-content: center;
+          flex-direction: column; 
+          width: 60%;
+          height: auto;
+          align-items: center;
+                   
+     }
+     a {
+         display: flex;
+         border: 3px solid blue;
+         background: grey;
+          height: 40px;
+          width: 60%;
+          /* text-align: center; */
+          align-items: center;
+          /* justify-items: center; */
+                    
+     }
+   
+   .top-content{
+    display: flex;
+    flex-direction: column;
 }
+.text-container h2 {
+font-weight: bold;
+}  
+.middle-content{
+    width: 100%;
+    text-align: center;
+   
+   }
+   .bigimg{
+    /* height: 100%; */
+    width: 100%;
+}
+img {
+    width: 100%;   
+}
+.boxes{
+    width: 100vh;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+   }
+
+   .boxes .box {
+       width: 100px;
+
+   }
+   
+   .bottom-content{
+      display: none;
+    }    
+    footer{
+      display: none;
+    }      
+      }
