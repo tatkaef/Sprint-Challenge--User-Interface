@@ -202,7 +202,7 @@ footer nav a {
     }
 /*--------- CHANGE 800px */
     @media(max-width: 800px){
-       body { background: blue; }
+       /* body { background: blue; } */
        header{
            margin: 3vh 1vh;
        }
